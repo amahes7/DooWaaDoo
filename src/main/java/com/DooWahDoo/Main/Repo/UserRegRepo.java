@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.DooWahDoo.Main.Model.UserRegister;
 
 @Repository
-public interface UserRegRepo extends JpaRepository<UserRegister, Long>{
+public interface UserRegRepo extends JpaRepository<UserRegister, Integer>{
 
 }

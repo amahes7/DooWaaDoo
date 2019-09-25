@@ -16,7 +16,7 @@ public class UserRegController {
 	@Autowired
 	private UserRegRepo userRegRepo;
 	
-	@PostMapping("/employees")
+	@PostMapping("/register")
     public UserRegister createEmployee(@Valid @RequestBody UserRegister userRegister) {
 //        return employeeRepository.save(employee);
 		return userRegRepo.save(userRegister);
