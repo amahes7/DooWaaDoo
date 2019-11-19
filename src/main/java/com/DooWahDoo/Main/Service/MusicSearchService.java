@@ -15,8 +15,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class MusicSearchService {
 	@Autowired
 	private MusicLibRepo musicLibRepo;
-	@Autowired
-	private MusicSearch musicSearch;
 
 	public List<MusicSearch> getAllSongs() {
 
