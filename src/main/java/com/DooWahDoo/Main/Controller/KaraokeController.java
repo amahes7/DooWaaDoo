@@ -2,6 +2,7 @@ package com.DooWahDoo.Main.Controller;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -40,6 +41,12 @@ public class KaraokeController {
 		return karaokeservice.getUsers();
 
 	}
+	
+	@GetMapping("/sessionId/{sessionId}/getSeesionDetailsById/")
+	public Optional<KaraokeSession> getSeesionDetailsById(@PathVariable("sessionId") long sessionId) {
+		return karaokeservice.getSeesionDetailsById(sessionId);
+
+	}
 
 	@GetMapping("/gig/{gigId}/getUserQueue")
 	public List<UserQueueDetails> getSessions(@PathVariable("gigId") long gigId) {
@@ -49,7 +56,7 @@ public class KaraokeController {
 	}
 	
 	@GetMapping("/gig/{gigId}/getCurrentUserQueue")
-	public UserQueueDetails get(@PathVariable("gigId") long gigId) {
+	public UserQueueDetails getCurrentUser(@PathVariable("gigId") long gigId) {
 		// Implement logic for GigID in future
 		// Currently Out of Scope
 		return karaokeservice.getCurrentUser();

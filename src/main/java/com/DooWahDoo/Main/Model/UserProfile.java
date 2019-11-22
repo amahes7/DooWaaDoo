@@ -41,6 +41,7 @@ public class UserProfile {
 	private long contactNo;
 	
 	@Column(name = "user_name")
+	@NotNull
 	private String userName;
 	
 	@Column(name = "dob")
