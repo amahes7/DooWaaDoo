@@ -1,7 +1,6 @@
 package com.DooWahDoo.Main.Controller;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -10,7 +9,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +19,6 @@ import com.DooWahDoo.Main.Model.SignUpProfileWrapper;
 import com.DooWahDoo.Main.Model.UserProfile;
 import com.DooWahDoo.Main.Repo.UserProfileRepo;
 import com.DooWahDoo.Main.Repo.UserRegRepo;
-import com.google.gson.JsonObject;
 @CrossOrigin
 @RestController
 @RequestMapping("/api/v1")
@@ -38,7 +35,6 @@ public class UserRegController {
 		UserProfile userProfile1=signUpProfileWrapper.getUserProfile();
 		SignUp signUp1 = signUpProfileWrapper.getSignUp();
 		userProfileRepo.save(userProfile1);
-		
 		signUp1.setUserProfile(userProfile1);
 		return userRegRepo.save(signUp1);
 		

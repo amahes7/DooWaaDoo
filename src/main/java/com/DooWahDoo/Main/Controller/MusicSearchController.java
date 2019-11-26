@@ -18,6 +18,9 @@ public class MusicSearchController {
 
 	@Autowired
 	private MusicSearchService musicSearchService;
+	
+	@Autowired
+	private SendEmailService sendEmailService;
 
 //	@GetMapping("")
 //	public String Hello(@RequestParam(value = "Artist") String artist) {
@@ -57,5 +60,13 @@ public class MusicSearchController {
 	@RequestMapping("/getAllGenre")
 	public List<String> getAllGenre() {
 		return musicSearchService.getAllGenre();
+	}
+	
+	@RequestMapping("/sendEmail")
+	public String sendEmail() {
+		String receiverEmailID = "asingl8@uic.edu";
+		String emailSubject = "Test Mail From Code";
+		String emailBody = "Doo Wah Doo Welcomes you!";
+		return sendEmailService.sendEmail(receiverEmailID,emailSubject,emailBody);
 	}
 }

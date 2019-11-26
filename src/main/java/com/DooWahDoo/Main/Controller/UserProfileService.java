@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.DooWahDoo.Main.Model.UserProfile;
-import com.DooWahDoo.Main.Repo.MusicLibRepo;
 import com.DooWahDoo.Main.Repo.UserProfileRepo;
 
 @Component
