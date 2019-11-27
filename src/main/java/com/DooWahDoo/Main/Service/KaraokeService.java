@@ -109,6 +109,7 @@ public class KaraokeService {
 			if (!session.isDone() && session.isCurrent()) {
 				userQueueDetails.setSongName(session.getMusicLibrary().getTitle());
 				userQueueDetails.setUserName(session.getUserProfile().getFirstName());
+				userQueueDetails.setSessionId(session.getSessionId());
 				break;
 			}
 		}
